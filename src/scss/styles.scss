@@ -1,0 +1,84 @@
+@import "./utils/normalize.scss";
+@import "./utils/variables.scss";
+@import "./utils/mixins.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  font-family: fontOpenSans;
+  @include padd(20px 0px);
+  gap: 33px;
+
+  .content__items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .content__item {
+      display: flex;
+      max-width: 738px;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+
+      .content__title {
+        text-align: center;
+
+        font-size: 24px;
+        .title {
+          text-align: center;
+        }
+      }
+
+      .content__about {
+        display: flex;
+        flex-direction: column;
+
+        @include padd(0px 20px);
+
+        .about {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .item__ul {
+          list-style-type: none;
+          .item__li {
+            display: flex;
+            &:before {
+              @include font($colorLi, $fontS: 23px, $fontF: none);
+              color: $colorLi;
+              content: "•";
+              padding-right: 3px;
+              font-size: 23px;
+            }
+
+            &:first-child {
+              padding-bottom: 10px;
+              &:before {
+                content: "";
+              }
+            }
+            &:last-child {
+              padding-top: 6px;
+              &:before {
+                content: "";
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 320px) and (max-width: 738px) {
+  .content__item {
+    min-width: 320px;
+  }
+}

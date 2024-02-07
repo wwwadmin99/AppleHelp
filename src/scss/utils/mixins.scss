@@ -1,0 +1,13 @@
+@mixin font($color, $fontF, $fontS) {
+  color: $color;
+  font-family: $fontF sans-serif;
+  font-size: $fontS;
+}
+
+@mixin padd($padd...) {
+  padding: $padd;
+}
+
+@mixin autoGrid($grid, $gap) {
+  flex: 0 1 calc(100% / grid + gap * grid - 1 / grid);
+}

@@ -1,0 +1,15 @@
+$prefix: "xs";
+$enable-grid-classes: true;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+$colorLi: #008695;
+$colorTitle: #333333;
+$fontOpenSans: Open Sans, sans-serif;
+
+@import "./normalize.scss";
